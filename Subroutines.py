@@ -31,4 +31,19 @@ def time3(evening):
         return False
 time3(evening)
 
-
+def getEven(integerList):
+    evennumbers = []
+    for integer in integerList:
+        if integer % 2 == 0:
+            evennumbers.append(integer)
+    return evennumbers
+print("Enter integers (type done when finished):")
+integerList = []
+while True:
+    numbers = input()
+    if numbers.lower() == "done":
+        break
+    else:
+        integerList.append(int(numbers))
+evens = getEven(integerList)
+print("The even numbers are:", evens)
