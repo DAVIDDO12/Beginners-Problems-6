@@ -1,9 +1,18 @@
+side1 = int(input("Enter a number:"))
+side2 = int(input("Enter a number:"))
+side3 = int(input("Enter a number:"))
 def triangleTest(side1,side2,side3):
-    triangle = side1 < side2 < side3
-    if triangle and side1 + side2 > side3:
-        return True
-    else:
+    triangle = side1 <= side2 <= side3
+    if side1 > side2 or side1 > side3 or side2 > side3:
+        print("Please follow this rule: side1 < side2 < side3")
         return False
+    elif triangle and side1 + side2 > side3:
+         print("This is a triangle")
+         return True
+    else:
+         print("This is not a triangle")
+         return False
+triangleTest(side1,side2,side3)
 
 name = input("What's your name:")
 morning = int(input("What's the time(24 hour time)"))
